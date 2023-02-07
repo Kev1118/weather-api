@@ -124,7 +124,7 @@ export default {
     methods:{
         searchWeather(currentLocation){
             this.isloading = true
-            axios.get("http://api.weatherapi.com/v1/forecast.json?key=40bcb26d498a48edbbb90555232801&q="+currentLocation+"&days=5&aqi=no&alerts=no")
+            axios.get("https://api.weatherapi.com/v1/forecast.json?key=40bcb26d498a48edbbb90555232801&q="+currentLocation+"&days=5&aqi=no&alerts=no")
                 .then((res) => {
                     
                     this.temp_celcius= res.data.current.temp_c+"°";
