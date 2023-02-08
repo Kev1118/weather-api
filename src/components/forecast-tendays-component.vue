@@ -1,9 +1,9 @@
 <template>
     <div v-if="getForecastday">
-        <div class="d-flex justify-content-center mb-3">
+        <div class="defaultPanel defaultCard" style="width: calc(100% / 1 - 10px); ;">
             <apexchart-component 
                 ref="getForecastday"
-                width="800" type="line" 
+                 type="line" 
                 :options="getApexOption" 
                 :series="getApexSeries"></apexchart-component>
         </div>
@@ -88,3 +88,27 @@ export default{
   
 }
 </script>
+
+<style scoped>
+.defaultPanelOther {
+  flex-basis: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.defaultPanel {
+  flex-basis: 100%;
+  /* padding: 5px; */
+
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+@media only screen and (max-width: 900px) {
+    /* #weather-chart #apexchartsvuechart-example{
+        width: 400px !important;
+        height: 400px !important;
+    } */
+}
+</style>

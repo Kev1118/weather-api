@@ -11,8 +11,32 @@ export default new Vuex.Store({
         forecastday: '',
         options: {
             chart: {
-                id: 'vuechart-example'
+                id: 'vuechart-example',
+                "height": 350,
+                "toolbar": {
+                    "show": true,
+                    "tools": {
+                      "download": true,
+                      "selection": true,
+                      "zoom": true,
+                      "zoomin": true,
+                      "zoomout": true,
+                      "pan": true,
+                      "reset": true
+                    },
+                    "autoSelected": "zoom"
+                  }
             },
+            "dataLabels": {
+                "enabled": true,
+                "offsetX": -6,
+                "style": {
+                  "fontSize": "12px",
+                  "colors": [
+                    null
+                  ]
+                }
+              },
             xaxis: {
                 categories: []
             }

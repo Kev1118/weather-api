@@ -6,11 +6,14 @@
                     <div class="card-body d-flex flex-column align-items-center">
                         <span class="text-white">{{ item.time }}</span>
                         <span>{{ item.temp_c }}° C</span>
-                        <img :src="item.condition.icon" height="80" width="80" alt="">
+                        <img :src="item.condition.icon" class="img-fluid" height="80" width="80" alt="">
                         <span class="text-white">{{ item.condition.text }}</span>
                     </div>
                 </div>
             </div>
+           
+            
+           
         </div>
     </div>
 </template>
@@ -80,6 +83,7 @@ export default {
                     array_today[i].time = moment(array_today[i].time).format('HH') + ':00';
                     this.hoursArray_5.push(array_today[i])
                 }
+                
             }
             console.log(this.hoursArray_5)
             // this.todayforecast.map((hr) => {
